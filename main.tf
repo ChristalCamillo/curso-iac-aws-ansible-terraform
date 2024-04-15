@@ -18,9 +18,9 @@ resource "aws_instance" "app_server" {
   ami           = "ami-080e1f13689e07408"
   instance_type = "t2.micro"
   user_data_replace_on_change = true
-  user_data =<<-EOT
-    ${file("${path.module}/user_data.sh")}
-  EOT 
+  # user_data =<<-EOT
+  #   ${file("${path.module}/user_data.sh")}
+  # EOT 
 
   tags = {
     Name = "Automatizando processos"
